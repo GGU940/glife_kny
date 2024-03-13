@@ -3,7 +3,7 @@
     position: relative;
     height: 90px;
     /* background-color: aqua; */
-
+    z-index: 999999999;
 }
 
 .hd h1 {
