@@ -1,0 +1,64 @@
+@charset 'utf-8';
+/* @import url(./my_reset.css); */
+/* 
+font-family: "Font Awesome 6 Free";
+font-weight: 900;
+Solid → 900
+Regular, Brands → 400
+Light → 300
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap')
+/* <uniquifier>: Use a unique and descriptive class name
+  <weight>: Use a value from 100 to 900 */
+
+/* .noto-sans kr-<uniquifier> {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+@font-face {
+
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Noto Sans KR", sans-serif;
+
+  --Pcolor-blue: #144AAA;
+  --Pcolor-sky: #F0F4FF;
+  --Pcolor-g0: #000;
+  --Pcolor-g3: #333;
+  --Pcolor-g7: #777;
+}
+
+
+.mw {
+  min-width: 1100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* padding: 0 2em; */
+  overflow: hidden;
+}
+
+
+@media (max-width: 1280px) {
+
+  /* 탭 */
+  .mw {
+    min-width: 1000px;
+    max-width: 1280px;
+    margin: 0 auto;
+    /* padding: 0 1rem; */
+    /* overflow: hidden; */
+  }
+}

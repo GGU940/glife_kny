@@ -1,0 +1,220 @@
+.hd {
+    display: flex;
+    position: relative;
+    height: 90px;
+    /* background-color: aqua; */
+
+}
+
+.hd h1 {
+    /* border: 3px solid violet; */
+    min-width: 130px;
+    width: 130px;
+    /* logo svg 영역을 위함 */
+    margin-right: 4%;
+}
+
+.hd h1 a {
+    /* background-color: aquamarine; */
+    display: block;
+    margin-top: 45px;
+    transform: translateY(-50%);
+}
+
+.hd>nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* 1menu랑 func 사이 약간 간격 */
+    position: relative;
+}
+
+.hd>nav>* {
+    display: flex;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+
+.hd>nav>ul>li {
+    /* display: list-item; */
+    /* !!!!!!!!!!수직 중앙정렬이 손쉽게(?) 되길래 썼는데 괜찮은건지 */
+    position: relative;
+    /* 2차메뉴 너비100% 위함 */
+}
+
+
+/*        1차메뉴        */
+
+
+.hd>nav .gnb {
+    width: 950px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.hd>nav .gnb>li {
+    /* border: 1px solid red; */
+    padding-right: 50px;
+}
+
+.hd>nav .gnb>li>a {
+
+    display: block;
+    /* li가 a를 감싸도록 */
+    font-family: GmarketSansBold;
+    font-size: 1.312rem;
+    color: var(--Pcolor-blue);
+}
+
+.hd>nav .gnb>li:hover>a {
+    color: black;
+}
+
+/*기능  */
+.hd>nav>.func {
+    width: 180px;
+    justify-content: space-between;
+}
+
+.hd>nav>.func a {
+    font-size: 0.875rem;
+    color: var(--Pcolor-blue);
+    font-family: 'GmarketSansMedium';
+    padding: 3px 0;
+
+}
+
+.hd>nav>.func a:hover {
+    border-bottom: 1px solid var(--Pcolor-blue);
+}
+
+
+/* 배경 -2차메뉴 */
+.hd>nav>.gnb::before {
+    z-index: 100;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -500%;
+    width: 1000%;
+    height: 230px;
+
+    background-color: #F0F4FF;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.hd>nav .gnb:hover::before {
+    visibility: visible;
+    opacity: 1;
+    /* 등장효과때문에 opacity 필요 */
+}
+
+/*        2차메뉴        */
+
+
+.hd>nav .gnb2 {
+    z-index: 100;
+    /* border: 3px solid gold; */
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.hd>nav>.gnb:hover.gnb li .gnb2 {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hd>nav .gnb2 li a {
+    font-family: GmarketSansMedium;
+    font-size: 0.857em;
+    position: relative;
+}
+
+.hd>nav .gnb2 li {
+    /* background-color: azure; */
+    height: 40px;
+    line-height: 40px;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin: 4px 0;
+
+
+}
+
+.hd>nav .gnb2 li a::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -15px;
+
+    content: "";
+    background-color: var(--Pcolor-blue);
+    /* background-color: none; */
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-radius: 99px;
+    transition: 0.5s;
+}
+
+.hd>nav .gnb2>li:hover>a::after {
+    width: 7px;
+    height: 7px;
+}
+
+.hd>nav .gnb2 li:hover>a {
+
+    color: var(--Pcolor-blue);
+}
+
+.hd .ham {
+    border: 1px solid red;
+    display: none;
+    font-size: 1.5rem;
+    color: var(--Pcolor-blue);
+    font-family: 'GmarketSansMedium';
+
+}
+
+@media (max-width: 1280px) {
+    /* 탭~모바일 */
+
+    .hd {
+        height: 50px;
+        padding: 5px 1rem;
+        display: flex;
+    }
+
+    .hd h1 img {
+        border: 1px solid violet;
+        width: 80px;
+        display: block;
+    }
+
+    .hd h1 a {
+        background-color: bisque;
+        margin-top: auto;
+        padding-right: 0px;
+        transform: translateY(0%);
+    }
+
+    .hd nav {
+        display: none;
+    }
+
+    .hd .ham {
+        display: block;
+        line-height: 45px;
+        position: absolute;
+        right: 1rem;
+    }
+
+}
