@@ -59,12 +59,10 @@
     font-family: GmarketSansBold;
     height: 70px;
     width: 100%;
-
 }
 
 .mainVisual .quick ul {
     background-color: var(--Pcolor-sky);
-
     display: block;
     font-size: 1.5625rem;
     z-index: 50;

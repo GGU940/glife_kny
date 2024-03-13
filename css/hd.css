@@ -176,7 +176,7 @@
 }
 
 .hd .ham {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     font-size: 1.5rem;
     color: var(--Pcolor-blue);
@@ -194,13 +194,13 @@
     }
 
     .hd h1 img {
-        border: 1px solid violet;
+        /* border: 1px solid violet; */
         width: 80px;
         display: block;
     }
 
     .hd h1 a {
-        background-color: bisque;
+        /* background-color: bisque; */
         margin-top: auto;
         padding-right: 0px;
         transform: translateY(0%);
